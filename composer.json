@@ -1,0 +1,42 @@
+{
+  "name": "knppy/money",
+  "description": "Currency formatting and conversion package.",
+  "keywords": [
+    "money",
+    "php"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.22",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Knppy\\Money\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Knppy\\Money\\Tests\\": "tests"
+    }
+  },
+  "extra": {},
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test:coverage": "vendor/bin/pest --coverage"
+  }
+}
